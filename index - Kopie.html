@@ -47,7 +47,7 @@
                             Your Age
                         </div>
                         <div>
-                            <input type="number" id="number"  placeholder="Your Age"/>
+                            <input type="number" id="number"  placeholder="Age"/>
                         </div>
                     </div>
                 </div>
@@ -79,22 +79,51 @@
             	<p id="result">Printed calculation goes here</p>
             </div>
         </div>
-        <h3>Un-complicating car coverage</h3>
+
+        <div class="midsection">
+        	<div class="white">
+        	
+        </div>
 			<h1>Un-complicating car coverage</h1>
 			<p> Understanding your coverage options shouldn't be so hard.</p>
 			<p> We'll guide you through available overage types, starting with who and what is covered</p>
+		</div>
 		
 	<div id="flexbox">
-		<div class=flexitem></div>
-
+		<div class=flexitem>
+			<h3>What comes standard</h3>
+			<p>The coverage you need</p>
+			<ol>
+				<li>Bodily Injury Liability</li>
+				<li>Property Damage</li>
+				<li>Medical Payments</li>
+			</ol>
+			<p>12-month rate garantee |24/7 customer service | Lifetime Repair guarantee</p>
 		</div>
 		<div class=flexitem>
-			
+			<h3>What comes standard</h3>
+			<p>The coverage you need</p>
+			<ol>
+				<li>Bodily Injury Liability</li>
+				<li>Property Damage</li>
+				<li>Medical Payments</li>
+			</ol>
+			<p>12-month rate garantee |24/7 customer service | Lifetime Repair guarantee</p>
 		</div>
 	</div>
 
 
-	<footer>
+	<footer class="footer">
+		  <div class="navbar">
+		  <a href="index.html">Home</a> 
+		  <a href="tech.html">Team</a> 
+		</div>
+		<div class="botpic">
+		<img src="img/logo-inv.png" alt="Banner Image">
+		</div>
+		<div class="sign">
+			<p>Oliver Kraus - CodeFactory 2020</p>
+		</div>
 	</footer>
 </div>
 
@@ -113,16 +142,19 @@
         var x = Math.floor((power * 100)/ number + 50);
         var y = Math.floor((power * 120)/ number + 100);
         var z = Math.floor((power * 150 / number) + 3 + 50);
-            if ( austria == true)
+
+            if ( austria == true){
                 	console.log(x);
-            		document.getElementById("result").innerHTML = (name + ", your insurance costs" + x+ " €");
-            if ( hungary == true)
-                console.log(y);
+            		document.getElementById("result").innerHTML = name + ", your insurance costs " + x + " €";
+            	}
+            if ( hungary == true){
                 	console.log(y);
-            		document.getElementById("result").innerHTML = (name + ", your insurance costs" + y+ " €");
-            if ( greece == true)
+            		document.getElementById("result").innerHTML = name + ", your insurance costs " + y + " €";
+            	}
+            if ( greece == true){
                 console.log(z);
-            	document.getElementById("result").innerHTML = (name + ", your insurance costs " + z + " €");
+            	document.getElementById("result").innerHTML = name + ", your insurance costs " + z + " €";
+            	}
         };
 
 </script>
