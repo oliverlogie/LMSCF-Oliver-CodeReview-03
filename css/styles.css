@@ -67,7 +67,8 @@
 .content{
   background-image: url("traffic-332857_1920.jpg");
   background-size: 100%;
-  height: 750px;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -75,13 +76,17 @@
 #box{
   z-index: 1;
   background-color: rgba(189,199,196,0.8);
-  height: 600px;
+  height: 700px;
+  width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  border-style: solid;
+  overflow: visible;
 }
 
 .ibox{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   justify-content: space-evenly;
   margin: 3%;
@@ -131,19 +136,13 @@ input[type=text], select,input[type=number]{
   margin-left: 20%;
 }
 
-.white{
-  background-color: white;
-  width: 80%;
-  z-index: 0;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 4%;
-
-}
 
 .midsection{
   background-color: rgba(189,199,196,0.6);
   align-content: center;
+  z-index: 0;
+  padding-top: 5%;
+  padding-bottom: 3%;
 }
 
 .midsection h1{
@@ -159,11 +158,20 @@ input[type=text], select,input[type=number]{
   margin-right: 20%;
 }
 
+#background2{
+  background-image: url("insurance.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
 #flexbox{
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 10%;
-  padding-top: 3%;
+  padding-top: 9%;
 }
 
 .flexitem{
@@ -171,7 +179,7 @@ input[type=text], select,input[type=number]{
   height: 230px;
   box-shadow: 3px 5px 5px black;
   border-style: solid;
-  background-color: ;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .flexitem p{
