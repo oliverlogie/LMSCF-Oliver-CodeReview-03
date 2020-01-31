@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Code Review 02</title>
+	<title>Code Review 03</title>
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -26,69 +26,103 @@
 			</div>	
 	</header>
 	<!-- navbar ends here -->
-	<div class="main">
-		<div  class= "content">
-			<div>
+		<div class="content">
+			<div class="contentheader">
 				<h1>Car Insurance</h1>
 			</div>
-			<div id="box">
-				<h1>Great coverge begins with a custom quote</h1>
-				<div>
-				<form >
-					<div class="ibox">
-						<div>
-							<div>Your name:</div> 
-							<input type="text" id="name" >
-							</div>
-						<div>
-					<div>Age: </div>
-					<input type="text" id="number">
-					</div>
-					</div>
-					<div class="ibox">
-						<div>
-							<div>
-								<div>
-								Country:
-								</div>
-									<select id="countries">
-		                                <option value="austria" id="austria">Austria</option>
-		                                <option value="hungary" id="hungary">Hungary</option>
-		                                <option value="greece" id="greece">Greece</option>
-	                            	</select>
-								</div>
-							</div>
-							<div>
-								<div>
-								Horsepower of your car:
-								</div>
-								<input type="text" id="power" placeholder="Horsepower">
-							</div>
-						</div>
-						<div class="ibox">
-							<button type="submit" onclick="Insurance()">Calculate</button>
-						</div>
-				</form>
-					<h2 id="text">Printed calculation comes here</h2>
-				</div>
-			</div>
-		<div>
+            
+            <div id="box">
+            	<h2 class="quote">Great coverage begins with a costum qoute</h2>
+                <div class="ibox">
+                    <div class="input">
+                        <div>
+                            Your name:
+                        </div>
+                        <div>
+                            <input type="text" id="name"  placeholder="Your name" />
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            Your Age
+                        </div>
+                        <div>
+                            <input type="number" id="number"  placeholder="Age"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox">
+                    <div class="input">
+                        <div>
+                            Country:
+                        </div>
+                        <div>
+                            <select id="countries">
+                                <option value="austria" id="austria">Austria</option>
+                                <option value="hungary" id="hungary">Hungary</option>
+                                <option value="greece" id="greece">Greece</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            Horesepower of your car:
+                        </div>
+                        <div>
+                            <input type="number" id="power"  placeholder="horsepower"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="enter">
+                	<button type="submit" onclick="Insurance()">Calculate</button>	
+            	</div>
+            	<p id="result">Printed calculation goes here</p>
+           		</div>
+        </div>
+
+        <div class="midsection">
 			<h1>Un-complicating car coverage</h1>
 			<p> Understanding your coverage options shouldn't be so hard.</p>
 			<p> We'll guide you through available overage types, starting with who and what is covered</p>
 		</div>
-		
-	<div id="flexbox">
-		<div class=flexitem></div>
-
+		<div id="background2">
+			<div id="flexbox">
+				<div class=flexitem>
+					<h3>What comes standard</h3>
+					<p>The coverage you need</p>
+					<ol>
+						<li>Bodily Injury Liability</li>
+						<li>Property Damage</li>
+						<li>Medical Payments</li>
+					</ol>
+					<h4>Benefits</h4>
+					<p>12-month rate garantee |24/7 customer service | Lifetime Repair guarantee</p>
+				</div>
+				<div class=flexitem>
+					<h3>Add-on protection &  coverage</h3>
+					<p>For more peace of mind</p>
+					<ol>
+						<li>Better Car Replacement</li>
+						<li>Towing & Labor</li>
+						<li>Rental Coverage</li>
+					</ol>
+					<h4>Benefits</h4>
+					<p>Accident Forgiveness | New Car Replacement&trade;</p>
+				</div>
+			</div>
 		</div>
-		<div class=flexitem>
-			
+
+	<footer class="footer">
+		  <div class="navbar">
+		  <a href="index.html">Home</a> 
+		  <a href="tech.html">Team</a> 
 		</div>
-	</div>
-
-
-	<footer>
+		<div class="botpic">
+		<img src="img/logo-inv.png" alt="Banner Image">
+		</div>
+		<div class="sign">
+			<p>Oliver Kraus - CodeFactory 2020</p>
+		</div>
 	</footer>
 </div>
 
@@ -107,17 +141,19 @@
         var x = Math.floor((power * 100)/ number + 50);
         var y = Math.floor((power * 120)/ number + 100);
         var z = Math.floor((power * 150 / number) + 3 + 50);
-            if ( austria == true)
-                console.log(x);
 
-            if ( hungary == true)
-                console.log(y);
-            	document.getElementById("text").innerHTML = (name + ", your insurance costs" + y);
-            if ( greece == true)
+            if ( austria == true){
+                	console.log(x);
+            		document.getElementById("result").innerHTML = name + ", your insurance costs " + x + " €";
+            	}
+            if ( hungary == true){
+                	console.log(y);
+            		document.getElementById("result").innerHTML = name + ", your insurance costs " + y + " €";
+            	}
+            if ( greece == true){
                 console.log(z);
-            	document.getElementById("text").innerHTML = (name + ", your insurance costs" + z)
-
-            
+            	document.getElementById("result").innerHTML = name + ", your insurance costs " + z + " €";
+            	}
         };
 
 </script>
