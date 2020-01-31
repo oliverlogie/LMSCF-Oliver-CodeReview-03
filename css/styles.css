@@ -1,0 +1,92 @@
+* {
+  margin: 0; }
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  position: absolute; }
+
+
+#headerpic {
+  background-color: #ffdab9;
+  height: 7em; }
+
+@media all and (max-width: 480px) {
+  .headerright {
+    display: none; } }
+.headerright {
+  float: right;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em; }
+
+.headerleft {
+  float: left;
+  width: 16em;
+  height: 3em;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em; }
+
+#time {
+  text-align: right;
+  padding-bottom: 0.7em;
+  padding-top: 0.3em; }
+
+.headline {
+  font-size: 30px;
+  background-color: lightgrey;
+  padding-left: 1em;
+  padding-bottom: 0.1em;
+  padding-top: 0.1em;
+  margin-bottom: 0.5em; }
+
+.navbar {
+  background-color: black;
+  padding: 1%;
+  padding-left: 2%; }
+  .navbar a {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 10px;
+    text-decoration: none;
+    color: white; }
+    .navbar a:hover {
+      background-color: #ffdab9; }
+
+.main{
+  
+}
+
+.content{
+  background-image: url("traffic-332857_1920.jpg");
+  background-size: 100%;
+  height: 700px;
+  background-repeat: no-repeat;
+  z-index: 0;
+
+}
+
+#box{
+  border-style: solid;
+  margin: 15%;
+  z-index: 1;
+  background-color: rgba(189,199,196,0.5);
+  height: 500px;
+}
+
+.ibox{
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin: 3%;
+}
+
+.enter{
+    background-color: #329235;
+    padding: 15px 60px;
+    border-radius: 30px;
+    color: white;
+    font-size: 24px;
+    z-index: 1;
+  }
