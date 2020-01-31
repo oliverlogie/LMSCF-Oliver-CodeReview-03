@@ -34,14 +34,15 @@
 			<div id="box">
 				<h1>Great coverge begins with a custom quote</h1>
 				<div>
-				<h2>Printed calculation goes here</h2>
 				<form >
 					<div class="ibox">
 						<div>
-							<div>Your name:</div> <input type="text" id="name" name="name" value="name">
+							<div>Your name:</div> 
+							<input type="text" id="name" >
 							</div>
 						<div>
-					<div>Age: </div><input type="text" name="number" id="number" value="Mouse">
+					<div>Age: </div>
+					<input type="text" id="number">
 					</div>
 					</div>
 					<div class="ibox">
@@ -49,24 +50,26 @@
 							<div>
 								<div>
 								Country:
-								</div> <select id="countries">
-                                <option id="austria" value="austria">Austria</option>
-                                <option id="hungary" value="hungary">Hungary</option>
-                                <option id="greece" value="greece">Greece</option>
-                            </select>
+								</div>
+									<select id="countries">
+		                                <option value="austria" id="austria">Austria</option>
+		                                <option value="hungary" id="hungary">Hungary</option>
+		                                <option value="greece" id="greece">Greece</option>
+	                            	</select>
+								</div>
 							</div>
-						</div>
-						<div>
 							<div>
-							Horsepower of your car:
+								<div>
+								Horsepower of your car:
+								</div>
+								<input type="text" id="power" placeholder="Horsepower">
 							</div>
-							<input type="text" name="horsepower" id="power" value="horsepower"></div>
 						</div>
 						<div class="ibox">
-							<input class="enter" onlick="Insurance()"type="submit" value="Submit">
+							<button type="submit" onclick="Insurance()">Calculate</button>
 						</div>
 				</form>
-					<h2>Printed calculation comes here</h2>
+					<h2 id="text">Printed calculation comes here</h2>
 				</div>
 			</div>
 		<div>
@@ -90,7 +93,8 @@
 </div>
 
 <script>
-function Insurance(){
+
+	function Insurance(){
         var name = document.getElementById("name").value;
         var number = document.getElementById("number").value;
         var power = document.getElementById("power").value;
@@ -98,16 +102,24 @@ function Insurance(){
         var austria = document.getElementById("austria").selected;
         var hungary = document.getElementById("hungary").selected;
         var greece = document.getElementById("greece").selected;
+        console.log(name)
+
         var x = Math.floor((power * 100)/ number + 50);
         var y = Math.floor((power * 120)/ number + 100);
-        var z = Math.floor(((power * 150) / (number + 3)) + 50);
+        var z = Math.floor((power * 150 / number) + 3 + 50);
             if ( austria == true)
                 console.log(x);
+
             if ( hungary == true)
                 console.log(y);
-             if ( greece == true)
+            	document.getElementById("text").innerHTML = (name + ", your insurance costs" + y);
+            if ( greece == true)
                 console.log(z);
-        }
+            	document.getElementById("text").innerHTML = (name + ", your insurance costs" + z)
+
+            
+        };
+
 </script>
 </body>
 </html>

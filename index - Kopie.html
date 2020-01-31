@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Review 02</title>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+
+<div class="container">
+
+	<header id="header">
+	
+
+		<div id=headerpic>
+			<div id="textheader">
+			<img class="headerleft" src="img\logo.png" alt="Banner Image">
+			<img class="headerright"src="img\banner.png" alt="Banner Image">
+		</div>
+		</div>	
+			<div class="navbar">
+			  <a href="index.html">Home</a> 
+			  <a href="tech.html">Team</a> 
+
+			</div>	
+	</header>
+	<!-- navbar ends here -->
+		<div class="content">
+			<div class="contentheader">
+				<h1>Car Insurance</h1>
+			</div>
+            
+            <div id="box">
+            	<h2 class="quote">Great coverage begins with a costum qoute</h2>
+                <div class="ibox">
+                    <div class="input">
+                        <div>
+                            Your name:
+                        </div>
+                        <div>
+                            <input type="text" id="name"  placeholder="Your name" />
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            Your Age
+                        </div>
+                        <div>
+                            <input type="number" id="number"  placeholder="Your Age"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="ibox">
+                    <div class="input">
+                        <div>
+                            Country:
+                        </div>
+                        <div>
+                            <select id="countries">
+                                <option value="austria" id="austria">Austria</option>
+                                <option value="hungary" id="hungary">Hungary</option>
+                                <option value="greece" id="greece">Greece</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <div>
+                            Horesepower of your car:
+                        </div>
+                        <div>
+                            <input type="number" id="power"  placeholder="horsepower"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="enter">
+                	<button type="submit" onclick="Insurance()">Calculate</button>	
+            	</div>
+            	<p id="result">Printed calculation goes here</p>
+            </div>
+        </div>
+        <h3>Un-complicating car coverage</h3>
+			<h1>Un-complicating car coverage</h1>
+			<p> Understanding your coverage options shouldn't be so hard.</p>
+			<p> We'll guide you through available overage types, starting with who and what is covered</p>
+		
+	<div id="flexbox">
+		<div class=flexitem></div>
+
+		</div>
+		<div class=flexitem>
+			
+		</div>
+	</div>
+
+
+	<footer>
+	</footer>
+</div>
+
+<script>
+
+	function Insurance(){
+        var name = document.getElementById("name").value;
+        var number = document.getElementById("number").value;
+        var power = document.getElementById("power").value;
+        var countries = document.getElementById("countries").value;
+        var austria = document.getElementById("austria").selected;
+        var hungary = document.getElementById("hungary").selected;
+        var greece = document.getElementById("greece").selected;
+        console.log(name)
+
+        var x = Math.floor((power * 100)/ number + 50);
+        var y = Math.floor((power * 120)/ number + 100);
+        var z = Math.floor((power * 150 / number) + 3 + 50);
+            if ( austria == true)
+                	console.log(x);
+            		document.getElementById("result").innerHTML = (name + ", your insurance costs" + x+ " €");
+            if ( hungary == true)
+                console.log(y);
+                	console.log(y);
+            		document.getElementById("result").innerHTML = (name + ", your insurance costs" + y+ " €");
+            if ( greece == true)
+                console.log(z);
+            	document.getElementById("result").innerHTML = (name + ", your insurance costs " + z + " €");
+        };
+
+</script>
+</body>
+</html>
