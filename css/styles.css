@@ -52,7 +52,14 @@
     text-decoration: none;
     color: white; }
     .navbar a:hover {
-      background-color: #ffdab9; }
+      background-color: #ffdab9;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 20px; }
 
 
 .contentheader h1{
@@ -227,6 +234,12 @@ input[type=text], select,input[type=number]{
 .botpic{
   width: 100%;
   padding-bottom: 3%;
+}
+
+@media all and (max-width: 1000px) {
+.botpic{
+  display: none;
+}
 }
 
 .footer img{
